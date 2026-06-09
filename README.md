@@ -25,11 +25,8 @@ I plan to host the series here on GitHub as the primary source of truth and cros
 
 ## Containers
 
-Each article ships a container with the tools and namespaces needed for its labs. Pull and run:
+Each article ships a container with the tools and namespaces needed for its labs. Pull and run the container for whichever article you're working through:
 
 ```bash
-docker compose -f containers/article-01/docker-compose.yml run --rm lab
-docker compose -f containers/article-02/docker-compose.yml run --rm lab
-docker compose -f containers/article-03/docker-compose.yml run --rm lab
-docker compose -f containers/article-04/docker-compose.yml run --rm lab
+docker compose -f containers/article-NN/docker-compose.yml run --rm lab
 ```

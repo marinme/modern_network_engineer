@@ -50,21 +50,19 @@ ExecStartPre=/bin/bash -c \
 
 ExecStart=/usr/bin/ip netns exec %i \
     /usr/lib/frr/watchfrr \
-        --daemon \
-        --pathspace=%i \
-        --loglevel=informational \
-        --log=syslog:informational \
+        -d \
+        -N %i \
+        --loglevel 6 \
+        -p /run/frr/%i/watchfrr.pid \
         zebra bgpd ospfd bfdd staticd
 
-ExecStop=/usr/bin/ip netns exec %i \
-    /usr/lib/frr/watchfrr \
-        --stop \
-        --pathspace=%i
+ExecStop=/bin/bash -c 'kill $(cat /run/frr/%i/watchfrr.pid 2>/dev/null) 2>/dev/null; \
+    ip netns exec %i /usr/lib/frr/watchfrr.sh stop zebra bgpd ospfd bfdd staticd 2>/dev/null; \
+    true'
 
 ExecReload=/usr/bin/ip netns exec %i \
-    /usr/lib/frr/watchfrr \
-        --reload \
-        --pathspace=%i \
+    /usr/lib/frr/watchfrr.sh reload \
+        -N %i \
         zebra bgpd ospfd bfdd staticd
 
 Restart=on-failure

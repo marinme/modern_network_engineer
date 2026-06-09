@@ -1,0 +1,21 @@
+#!/bin/bash
+# /lab/frrvtysh — wrapper for vtysh inside a named namespace + pathspace.
+#
+# Usage:
+#   /lab/frrvtysh r1              # interactive vtysh prompt for r1
+#   /lab/frrvtysh r1 -c 'show ip route'   # non-interactive one-shot command
+#
+# Equivalent to:
+#   ip netns exec <ns> vtysh -N <ns> [args...]
+
+set -euo pipefail
+
+if [ $# -eq 0 ]; then
+    echo "usage: frrvtysh <namespace> [vtysh-args...]" >&2
+    echo "example: frrvtysh r1" >&2
+    echo "example: frrvtysh r1 -c 'show ip bgp summary'" >&2
+    exit 1
+fi
+
+NS="$1"; shift
+exec ip netns exec "$NS" vtysh -N "$NS" "$@"

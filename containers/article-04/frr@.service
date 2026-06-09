@@ -1,0 +1,74 @@
+# /etc/systemd/system/frr@.service
+#
+# Template unit for running an FRR routing daemon suite inside a Linux
+# network namespace.  The instance name (%i) is the namespace name:
+#
+#   systemctl start frr@r1   →  FRR inside the "r1" namespace
+#   systemctl start frr@r2   →  FRR inside the "r2" namespace
+#
+# Config lives at /etc/frr/%i/frr.conf  (and /etc/frr/%i/daemons).
+# Sockets live at /run/frr/%i/ (--pathspace %i).
+# Connect with vtysh:  ip netns exec %i vtysh -N %i
+#                  or: /lab/frrvtysh %i
+#
+# Journal integration: since this is a systemd unit, all FRR log output
+# lands in the journal under _SYSTEMD_UNIT=frr@%i.service and is visible
+# via:  journalctl -u 'frr@*' -f
+#
+# This unit is installed in the container but only started by /lab/setup.sh
+# once the namespace and veth topology are ready.
+
+[Unit]
+Description=FRR routing daemon suite in namespace %i
+After=network.target
+Documentation=https://docs.frrouting.org/
+
+[Service]
+Type=forking
+NotifyAccess=all
+PIDFile=/run/frr/%i/watchfrr.pid
+TimeoutStartSec=120
+TimeoutStopSec=60
+# Read which daemons to start from the per-namespace daemons file.
+# Falls back to the global /etc/frr/daemons if per-namespace file absent.
+EnvironmentFile=-/etc/frr/%i/daemons
+EnvironmentFile=-/etc/frr/daemons
+
+# Create runtime and log directories owned by frr
+ExecStartPre=+/bin/mkdir -p /run/frr/%i /var/log/frr/%i /etc/frr/%i
+ExecStartPre=+/bin/chown -R frr:frr /run/frr/%i /var/log/frr/%i /etc/frr/%i
+
+# Ensure the per-namespace vtysh.conf exists (points to pathspace sockets)
+ExecStartPre=/bin/bash -c \
+    'test -f /etc/frr/%i/vtysh.conf || \
+     echo "service integrated-vtysh-config" > /etc/frr/%i/vtysh.conf'
+
+# Ensure frr.conf exists (empty is valid; FRR starts with no config)
+ExecStartPre=/bin/bash -c \
+    'test -f /etc/frr/%i/frr.conf || touch /etc/frr/%i/frr.conf && \
+     chown frr:frr /etc/frr/%i/frr.conf'
+
+ExecStart=/usr/bin/ip netns exec %i \
+    /usr/lib/frr/watchfrr \
+        --daemon \
+        --pathspace=%i \
+        --loglevel=informational \
+        --log=syslog:informational \
+        zebra bgpd ospfd bfdd staticd
+
+ExecStop=/usr/bin/ip netns exec %i \
+    /usr/lib/frr/watchfrr \
+        --stop \
+        --pathspace=%i
+
+ExecReload=/usr/bin/ip netns exec %i \
+    /usr/lib/frr/watchfrr \
+        --reload \
+        --pathspace=%i \
+        zebra bgpd ospfd bfdd staticd
+
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,24 @@
+services:
+  lab:
+    build: .
+    image: netmod/article-04
+    container_name: article-04
+    hostname: workbench
+    stdin_open: true
+    tty: true
+    # systemd as PID 1 requires privileged mode for cgroup v2 management.
+    # This provides NET_ADMIN, NET_RAW, and SYS_ADMIN as a side-effect.
+    privileged: true
+    # systemd needs a writable cgroup hierarchy and tmpfs for runtime dirs.
+    cgroupns: host
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:rw
+      - /run/systemd/journal:/run/systemd/journal
+      # Lab tests — mounted read-only; run from /lab as ./tests/<lab>/test.sh N
+      - ../../labs/lab-a04-routing/tests:/lab/tests/routing:ro
+      - ../../labs/lab-a04-vrrp/tests:/lab/tests/vrrp:ro
+      - ../../labs/lab-a04-multicast/tests:/lab/tests/multicast:ro
+    tmpfs:
+      - /run
+      - /run/lock
+      - /tmp

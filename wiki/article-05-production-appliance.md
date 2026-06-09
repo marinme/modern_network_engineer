@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, foundation, linux, nftables, systemd-networkd, tuning, ai-callback]
-article_number: 5
-cluster: Foundation
-created: 2026-06-04
-updated: 2026-06-04
-sources: [[[network-engineer-modernization-series]]]
-related: [[[article-01-linux-for-network-engineers]], [[article-02-interfaces-namespaces-topologies]], [[article-03-common-network-admin-tasks]], [[article-04-routing-daemons]], [[systemd-networkd]], [[man-systemd-networkd]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 05 — Production Linux Network Appliance
 

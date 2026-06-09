@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, operations, observability, streaming-telemetry, prometheus, grafana, ai-intro]
-article_number: 21
-cluster: Operations and Production
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[streaming-telemetry]], [[prometheus]], [[grafana]], [[gnmi]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 21 — Observability: Metrics, Logs, Streaming Telemetry
 

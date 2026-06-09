@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, capstone, synthesis, aiops, ibn, ai-intro]
-article_number: 24
-cluster: Capstone
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[aiops]], [[intent-based-networking]], [[model-context-protocol]]]
-status: draft
----
 
 # Article 24 — Where This Is Heading: AIOps and Intent-Based Networking
 

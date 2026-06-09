@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article, foundation, linux, ai-intro]
-article_number: 1
-cluster: Foundation
-created: 2026-05-28
-updated: 2026-06-04
-sources: [[[network-engineer-modernization-series]]]
-related: [[[linux-for-network-engineers]], [[article-02-interfaces-namespaces-topologies]], [[article-03-common-network-admin-tasks]], [[article-04-routing-daemons]], [[article-05-production-appliance]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Linux for Network Engineers
 

@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-device-interaction, api, flagship, ai-intro]
-article_number: 10
-cluster: Modern Device Interaction
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[arista-eapi]], [[restconf]], [[netconf]], [[gnmi]], [[arista-ceos]], [[containerlab]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 10 — REST APIs for Network Devices (flagship)
 

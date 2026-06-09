@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-device-interaction, docker, containers, ai-intro]
-article_number: 11
-cluster: Modern Device Interaction
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[docker]], [[containerlab]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 11 — Containers and Docker for Network Engineers
 

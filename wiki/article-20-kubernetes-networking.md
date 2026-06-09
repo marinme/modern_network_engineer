@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-architectures, kubernetes, cni, ai-callback]
-article_number: 20
-cluster: Modern Network Architectures
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[kubernetes]], [[k3s]], [[cni]]]
-status: draft
----
 
 # Article 20 — Kubernetes Networking for Network Engineers
 

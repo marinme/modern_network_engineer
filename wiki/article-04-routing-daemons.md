@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article, foundation, linux, frr, ai-callback]
-article_number: 4
-cluster: Foundation
-created: 2026-06-03
-updated: 2026-06-09
-sources: [[[network-engineer-modernization-series]]]
-related: [[[article-01-linux-for-network-engineers]], [[article-02-interfaces-namespaces-topologies]], [[article-03-common-network-admin-tasks]], [[article-05-production-appliance]], [[frr]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Routing Daemons (Linux as a Router)
 

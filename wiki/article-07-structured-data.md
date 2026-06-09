@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, foundation, yaml, json, ai-intro]
-article_number: 7
-cluster: Foundation
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[yaml]], [[json]]]
-status: draft
----
 
 # Article 07 — YAML, JSON, and Structured Data
 

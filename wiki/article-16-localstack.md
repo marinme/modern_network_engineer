@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, cloud-networking, localstack, terraform, ai-callback]
-article_number: 16
-cluster: Cloud Networking
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[localstack]], [[terraform]]]
-status: draft
----
 
 # Article 16 — Cloud Networking Hands-On with LocalStack
 

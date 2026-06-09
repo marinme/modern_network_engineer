@@ -1,20 +1,3 @@
----
-type: topic
-tags: [article-plan, foundation, git, workflow, ai-callback]
-article_number: 6
-cluster: Foundation
-created: 2026-05-27
-updated: 2026-06-04
-sources: [[[network-engineer-modernization-series]]]
-related: [[[git]], [[github-actions]], [[ci-cd-for-network-changes]]]
-status: draft
-reconstruction_note: |
-  Original file (article-05-git.md before the Article 4/5 split renumber) was
-  lost during the rename operation that produced this file. This outline is a
-  reconstruction from the index summary, the wiki/git.md concept page, and the
-  series-source document. Review for fidelity to the original intent before
-  publication.
----
 
 # Article 06 — Git and Collaborative Workflows
 

@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-architectures, vxlan, evpn, ai-callback]
-article_number: 17
-cluster: Modern Network Architectures
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[vxlan]], [[evpn]], [[overlay-network]], [[arista-ceos]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 17 — Overlay Networks: VXLAN and EVPN Fundamentals
 

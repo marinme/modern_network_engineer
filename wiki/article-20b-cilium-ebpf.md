@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-architectures, extension, cilium, ebpf, cni, ai-callback]
-article_number: "20b"
-cluster: Modern Network Architectures (optional extension)
-created: 2026-06-01
-updated: 2026-06-01
-sources: [[[network-engineer-modernization-series]]]
-related: [[[article-20-kubernetes-networking]], [[cni]], [[kubernetes]], [[k3s]]]
-status: stub
----
 
 # Article 20b — Advanced CNI: Cilium and eBPF (optional extension)
 

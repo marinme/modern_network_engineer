@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-architectures, sd-access, flagship, ai-callback]
-article_number: 18
-cluster: Modern Network Architectures
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[cisco-sd-access]], [[evpn]], [[vxlan]], [[netbox]], [[nautobot]], [[ansible]], [[arista-ceos]]]
-status: draft
----
 
 # Article 18 — Open-Source SD-Access Lab (flagship)
 

@@ -1,20 +1,3 @@
----
-type: topic
-tags: [article-plan, automation, python, ai-callback]
-article_number: 8
-cluster: Automation Primer
-created: 2026-05-28
-updated: 2026-06-04
-sources: [[[network-engineer-modernization-series]]]
-related: [[[python]], [[article-07-structured-data]], [[article-09-ansible]]]
-status: draft
-reconstruction_note: |
-  Original file (article-07-python.md before the Article 4/5 split renumber)
-  was lost during the rename + frontmatter-bump operation. This outline is a
-  reconstruction from the index summary ("Python primer; generate-then-verify
-  loop"), the series-source document, and the pattern of peer outline files.
-  Review for fidelity to the original intent before publication.
----
 
 # Article 08 — Python Primer for Network Work
 

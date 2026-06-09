@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, infrastructure-as-code, netbox, source-of-truth, ai-intro]
-article_number: 14
-cluster: Infrastructure as Code
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[netbox]], [[nautobot]], [[source-of-truth]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 14 — NetBox as Source of Truth
 

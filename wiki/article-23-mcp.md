@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, capstone, mcp, agents, ai-intro]
-article_number: 23
-cluster: Capstone
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[model-context-protocol]], [[containerlab]], [[netbox]], [[ci-cd-for-network-changes]]]
-status: draft
----
 
 # Article 23 — AI Agents and MCP for Network Operations (capstone)
 

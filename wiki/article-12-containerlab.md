@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-device-interaction, containerlab, lab, ai-intro]
-article_number: 12
-cluster: Modern Device Interaction
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[containerlab]], [[arista-ceos]], [[docker]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 12 — Containerlab Deep Dive
 

@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, infrastructure-as-code, terraform, opentofu, ai-intro]
-article_number: 13
-cluster: Infrastructure as Code
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[terraform]], [[opentofu]], [[infrastructure-as-code]], [[declarative-vs-imperative]]]
-status: draft
----
 
 # Article 13 — Terraform / OpenTofu for Network Infrastructure
 

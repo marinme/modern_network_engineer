@@ -1,13 +1,3 @@
----
-type: topic
-tags: [article, foundation, linux, common-tasks, ai-callback]
-article_number: 3
-cluster: Foundation
-created: 2026-06-03
-updated: 2026-06-09
-sources: [[[network-engineer-modernization-series]]]
-status: draft
----
 
 # Common Network-Admin Tasks, Done in Base Linux
 

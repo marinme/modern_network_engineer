@@ -10,7 +10,7 @@ services:
     # This provides NET_ADMIN, NET_RAW, and SYS_ADMIN as a side-effect.
     privileged: true
     # systemd needs a writable cgroup hierarchy and tmpfs for runtime dirs.
-    cgroupns: host
+    cgroup: host
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:rw
       - /run/systemd/journal:/run/systemd/journal

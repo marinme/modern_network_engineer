@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, automation-primer, ansible, ai-intro]
-article_number: 9
-cluster: Automation Primer
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[ansible]], [[jinja2]], [[arista-ceos]]]
-status: draft
----
 
 # Article 09 — Ansible Primer
 

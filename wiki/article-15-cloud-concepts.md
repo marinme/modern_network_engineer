@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, cloud-networking, primitives, ai-callback]
-article_number: 15
-cluster: Cloud Networking
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[network-namespaces]], [[frr]], [[overlay-network]]]
-status: draft
----
 
 # Article 15 — Cloud Networking Concepts from First Principles
 

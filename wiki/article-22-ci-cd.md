@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, operations, ci-cd, ai-intro]
-article_number: 22
-cluster: Operations and Production
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[ci-cd-for-network-changes]], [[github-actions]], [[gitlab-ci]], [[containerlab]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 22 — CI/CD for Network Changes
 

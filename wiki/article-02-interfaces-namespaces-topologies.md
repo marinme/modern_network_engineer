@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article, foundation, linux, interfaces, namespaces, ai-callback]
-article_number: 2
-cluster: Foundation
-created: 2026-06-03
-updated: 2026-06-05
-sources: [[[network-engineer-modernization-series]], [[digging-into-linux-namespaces-part-1]]]
-related: [[[article-01-linux-for-network-engineers]], [[article-03-common-network-admin-tasks]], [[article-04-routing-daemons]], [[article-05-production-appliance]], [[network-namespaces]], [[digging-into-linux-namespaces-part-1]], [[assumed-networking-knowledge]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Interfaces, Namespaces, and Topologies in Linux
 

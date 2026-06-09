@@ -1,14 +1,3 @@
----
-type: topic
-tags: [article-plan, modern-architectures, ztna, identity, ai-intro]
-article_number: 19
-cluster: Modern Network Architectures
-created: 2026-05-28
-updated: 2026-05-28
-sources: [[[network-engineer-modernization-series]]]
-related: [[[zero-trust-network-access]], [[openziti]], [[legacy-config-coverage-map]]]
-status: draft
----
 
 # Article 19 — Zero Trust Network Access (ZTNA)
 

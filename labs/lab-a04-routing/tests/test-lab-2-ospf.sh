@@ -86,7 +86,7 @@ for ns in "${OSPF_NS[@]}"; do
     while IFS= read -r prefix; do
         [ -n "$prefix" ] && loopbacks+=("$prefix")
     done < <(ip -j -n "$ns" route show proto ospf 2>/dev/null | \
-             jq -r '.[] | select(.dst | test("/32$")) | .dst' 2>/dev/null)
+             jq -r '.[] | select(.dst | test("/32$") or (test("/") | not)) | .dst' 2>/dev/null)
 
     if [ "${#loopbacks[@]}" -eq 0 ]; then
         info "frr@$ns: no /32 OSPF routes found (loopbacks may not be advertised yet)"

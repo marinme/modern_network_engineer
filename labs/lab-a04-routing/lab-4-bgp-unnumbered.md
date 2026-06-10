@@ -23,6 +23,8 @@ Remove the numbered BGP config from Lab 3 and replace it with unnumbered:
 
 ## Part A — Replace numbered BGP with unnumbered on all three routers
 
+**Watch out for:** FRR 8.x requires `no bgp ebgp-requires-policy` on all eBGP sessions (see Lab 3). Include it when replacing the numbered config.
+
 Configure r1:
 
 ```bash
@@ -31,6 +33,7 @@ r1# configure terminal
 r1(config)# no router bgp 65001
 r1(config)# router bgp 65001
 r1(config-router)# bgp router-id 10.0.0.1
+r1(config-router)# no bgp ebgp-requires-policy
 r1(config-router)# neighbor r1-r2 interface remote-as external
 r1(config-router)# address-family ipv4 unicast
 r1(config-router-af)# network 10.0.0.1/32
@@ -49,8 +52,10 @@ Configure r2 (middle router — peers with both r1 and r3):
 ```bash
 /lab/frrvtysh r2
 r2# configure terminal
+r2(config)# no router bgp 65002
 r2(config)# router bgp 65002
 r2(config-router)# bgp router-id 10.0.0.2
+r2(config-router)# no bgp ebgp-requires-policy
 r2(config-router)# neighbor r2-r1 interface remote-as external
 r2(config-router)# neighbor r2-r3 interface remote-as external
 r2(config-router)# address-family ipv4 unicast
@@ -75,6 +80,7 @@ r3# configure terminal
 r3(config)# no router bgp 65003
 r3(config)# router bgp 65003
 r3(config-router)# bgp router-id 10.0.0.3
+r3(config-router)# no bgp ebgp-requires-policy
 r3(config-router)# neighbor r3-r2 interface remote-as external
 r3(config-router)# address-family ipv4 unicast
 r3(config-router-af)# network 10.0.0.3/32

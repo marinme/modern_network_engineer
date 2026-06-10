@@ -1,0 +1,30 @@
+# One-shot wrapper for the Article 1 workbench container.
+#
+# Use this if you cloned the repo and want to skip remembering the cap-add
+# flags. From the repo root:
+#
+#   docker compose -f containers/article-01/docker-compose.yml run --rm lab
+#
+# That builds the image if needed, drops you into a bash shell inside the
+# container with the right capabilities, and removes the container on exit.
+# See containers/article-01/Dockerfile for the full tool list and rationale.
+
+services:
+  lab:
+    build: .
+    image: netmod/article-01
+    container_name: article-01
+    hostname: workbench
+    stdin_open: true
+    tty: true
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+    volumes:
+      # Read-only mount of the lab verification scripts so you can run
+      # `./tests/test.sh` from the /lab prompt after completing an exercise.
+      # Read-only: the tests only inspect the state you built.
+      - ../../labs/lab-a01-translation/tests:/lab/tests:ro
+    # No published ports, no host networking. The only host volume is the
+    # read-only tests directory above; everything you build is namespaced
+    # inside the container.

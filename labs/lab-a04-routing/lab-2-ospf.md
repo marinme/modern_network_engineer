@@ -37,7 +37,7 @@ r1(config)# router ospf
 r1(config-router)# ospf router-id 10.0.0.1
 r1(config-router)# network 10.0.12.0/24 area 0
 r1(config-router)# network 10.0.0.1/32 area 0
-r1(config-router)# passive-interface r1-lo
+r1(config-router)# passive-interface lo
 r1(config-router)# end
 r1# write
 r1# exit
@@ -53,7 +53,7 @@ r2(config-router)# ospf router-id 10.0.0.2
 r2(config-router)# network 10.0.12.0/24 area 0
 r2(config-router)# network 10.0.23.0/24 area 0
 r2(config-router)# network 10.0.0.2/32 area 0
-r2(config-router)# passive-interface r2-lo
+r2(config-router)# passive-interface lo
 r2(config-router)# end
 r2# write
 r2# exit
@@ -100,7 +100,7 @@ r3(config)# router ospf
 r3(config-router)# ospf router-id 10.0.0.3
 r3(config-router)# network 10.0.23.0/24 area 0
 r3(config-router)# network 10.0.0.3/32 area 0
-r3(config-router)# passive-interface r3-lo
+r3(config-router)# passive-interface lo
 r3(config-router)# end
 r3# write
 r3# exit
@@ -128,7 +128,7 @@ The checker auto-discovers the namespace with a Full OSPF neighbor, confirms `pr
 <details>
 <summary>Answers (click to expand)</summary>
 
-**Q: Why is `passive-interface r1-lo` needed?**
+**Q: Why is `passive-interface lo` needed?**
 A: The `network 10.0.0.1/32 area 0` statement tells OSPF to advertise the loopback's prefix and also to try to send OSPF hellos on that interface. A loopback has no physical neighbor to hear those hellos, so they would time out and waste resources. `passive-interface` stops OSPF from sending hellos on the interface while still including the prefix in the LSDB.
 
 **Q: The `show ip route` output in vtysh says `O` for OSPF routes. `ip route show proto ospf` shows the same routes. Are these the same data?**

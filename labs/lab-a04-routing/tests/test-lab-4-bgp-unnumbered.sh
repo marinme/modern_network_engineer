@@ -97,7 +97,7 @@ for ns in "${UNM_NS[@]}"; do
     # Find interfaces with BGP unnumbered peers configured
     peer_ifaces=$(ip netns exec "$ns" vtysh -N "$ns" -c 'show ip bgp summary json' 2>/dev/null | \
         jq -r '.ipv4Unicast?.peers? // {} | to_entries[] |
-                select(.value.idType? == "interface") | .value.peerIp? // empty' \
+                select(.value.idType? == "interface") | .key' \
         2>/dev/null)
 
     if [ -z "$peer_ifaces" ]; then
